@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2384184014983126');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=2384184014983126&ev=PageView
+    &noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -47,6 +68,26 @@
         </div>
     </nav>
 
+    <div id="side-section">
+        <h1 id="arrow">></h1>
+        <div id="side-content">
+            <div class="section-icons" style="width:100%">
+                <a href="https://www.facebook.com/grupodecolarempresas/" target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/grupo-decolar/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/grupodecolar/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div>
+                <a class="link btn btn-success" target="_blank"
+                    href="https://www.sympla.com.br/lider-master-estrategias-de-comunicacao-para-resultados-de-alta-performance__617249">Comprar</a>
+            </div>
+        </div>
+    </div>
     <a class="btn btn-success fixed-buttom" target="_blank"
         href="https://www.sympla.com.br/lider-master-estrategias-de-comunicacao-para-resultados-de-alta-performance__617249"
         style="margin-top: 2em;">Comprar</a>
@@ -104,13 +145,15 @@
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-12">
-                    <div class="speaker-list custom-card">
+                    <div class="speaker-list custom-card" id="first-description">
                         <h5>Dra. Cristiane Romano</h5>
                         <ul>
                             <li>Excecutive Coaching pela Universidade de Ohio, EUA</li>
                             <li>Business and Executive Coaching pelo IBC</li>
-                            <li>Gestora Coach pela UP Soluções e IPOG</li>
-                            <li>Coaching formada pelo Instituto de Coaching com certificação Internacional – IBC</li>
+                            <li class="hide-info-first">Gestora Coach pela UP Soluções e IPOG</li>
+                            <li class="hide-info-first">Coaching formada pelo Instituto de Coaching com certificação
+                                Internacional – IBC</li>
+                            <a id="first-link" onclick="showMoreFirst()" href="#first-description">saiba mais</a>
                         </ul>
                     </div>
                 </div>
@@ -118,23 +161,27 @@
 
             <div class="row">
                 <div class="col-md-8 col-sm-12">
-                    <div class="content-info-section custom-card">
+                    <div class="content-info-section custom-card" id="second-description">
                         <h3>O que você vai aprender:</h3>
                         <ul>
                             <li>Comunicar de forma efetiva por meio da neurociência</li>
                             <li>Técnicas de como inspirar seus liderado a melhrar sua performance</li>
-                            <li>Feedback levado para ação – Feedforward</li>
-                            <li>Tempo e produtividade</li>
-                            <li>Liderança situacional X Líder que comunica</li>
-                            <li>Expressividade (recursos verbais, vocais, e não vocais) na liderança.</li>
-                            <li>Apresentações de projetos</li>
-                            <li>Técnicas de engajamento de equipes por meio da comunicação.</li>
+                            <li class="hide-info-second">Feedback levado para ação – Feedforward</li>
+                            <li class="hide-info-second">Tempo e produtividade</li>
+                            <li class="hide-info-second">Liderança situacional X Líder que comunica</li>
+                            <li class="hide-info-second">Expressividade (recursos verbais, vocais, e não vocais) na
+                                liderança.</li>
+                            <li class="hide-info-second">Apresentações de projetos</li>
+                            <li class="hide-info-second">Técnicas de engajamento de equipes por meio da comunicação.
+                            </li>
+                            <a id="second-link" onclick="showMoreSecond()" href="#second-description">saiba mais</a>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12" style="display: flex; justify-content: flex-end;">
-                    <div class="discount-image">
-                        <!-- image here -->
+                <div class="col-md-4 col-sm-12" style="display: flex; justify-content: center;">
+                    <div class="highlight-pratice">
+                        <h1>100%</h1>
+                        <h2>Prático</h2>
                     </div>
                 </div>
             </div>
@@ -277,6 +324,7 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
